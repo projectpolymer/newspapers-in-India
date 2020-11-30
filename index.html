@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="//d3js.org/d3-scale-chromatic.v0.3.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="style.css" />
+  <title>State_v_languages</title>
+</head>
+
+<body class="blue-grey lighten-5">
+
+    <div class="row center">
+        <header class="blue-grey lighten-5 section">
+            <h4 class="center black-text" font-family: verdana><b>Circulation of Indian Newspapers
+                <br>across states and UTs: A Density projection</b></h4>
+        </header>
+    </div>
+
+    <div class="container section">
+        <div class="row">
+            <div class="col s12 l5">
+                <h5><b>About the visualization</b></h5>
+                <h6>
+                    Newspapers are still at large in India despite the digital takeover.
+                    This visualization aims to portray the circulation of newspapers across 
+                    different states and UTs(Union Territories) of India with a normalized 
+                    population of 10,000 people each state. Data represents circulation in 2018.<br>
+                    <p></p>
+    
+                    Despite Uttar Pradesh having largest circulation of newspapers, with total
+                    circulation of 68 Million newspapers... density plots with normalized population shows Chandigarh
+                    having highest circulation, followed by Delhi and Uttarkhand. Many of the eastern states show the
+                    lowest circulations with Nagaland being lower end, followed by Assam and Meghalaya.
+                </h6>
+    
+                <p><b>Data source:- </b><a href = "http://rni.nic.in/home" target = "_blank">OFFICE OF REGISTRAR OF NEWSPAPERS FOR INDIA</a></p>
+                <p>Density plots inspired by <b>Federica Fragapane's</b> <a href="https://www.behance.net/gallery/99114047/Population-Density" target = "_blank">Population Density.</a></p>
+                <a id="download" href="#">Download Visualization</a>
+    
+            </div>
+            <div class="col s12 l5 push-l2">
+                <h5><b>How to read</b></h5>
+                <img src="legend_2.svg" alt="how to read the cisualization">
+                <!--<div id="legend_viz" class = "center"></div>-->
+    
+            </div>
+        </div>
+    
+    </div>
+
+
+    <div class="row center">
+        <div class="row"></div>
+        <div class="row">
+            <h5><b>The visualization</b></h5>
+        </div>
+        <div class="col s12 l6 push-l3">
+            <div id="density_viz" class = "center">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--state vs languages-->
+
+    <div class="nav z-depth-0">
+        <div class="blue-grey lighten-5 section">
+            <h3 class="center black-text" font-family: verdana>State V Languages</h3>
+        </div>
+    </div>
+
+
+    <div class="section center">
+        <p class="grey-text flow-text">Circulation of different languages across states</p>
+    </div>
+
+    <div class="container section filters center">
+        <div class="row">
+            <div class="col s12 l12">
+                <!--<button class = "active" data-activity="1213">2012-13</button>-->
+                <button data-activity="1314">2013-14</button>
+                <button data-activity="1415">2014-15</button>
+                <button class = "active" data-activity="1516">2015-16</button>
+                <button data-activity="1617">2016-17</button>
+                <button data-activity="1718">2017-18</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="canvas" id = "my_dataviz">
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js" integrity="sha512-jaNmuLbHtQ1ND+i63wVvwBd9T2hB3gTnk3x0Pp5R+AJwDdyzMe3t0vQqwUSoI9a/Ol1nscGV/1et4zSwL0P3AA==" crossorigin="anonymous"></script>
+    <!--<script src="index.js"></script>-->
+    <script src="graph.js"></script>
+    <script src="graph2.js"></script>
+</body>

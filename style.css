@@ -1,0 +1,22 @@
+button{
+    background: #333 !important;
+    margin-bottom: 20px;
+    padding: 12px;
+    font-size: 1em;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+button.active{
+    background-color: indigo !important;
+}
+
+.tip{
+    padding: 10px;
+    background: #333;
+    color: #fff;
+
+}
